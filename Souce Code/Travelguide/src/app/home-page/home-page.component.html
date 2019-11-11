@@ -1,0 +1,116 @@
+<app-header></app-header>
+
+<div>
+  <div class="parent-container">
+    <div class="child-container">
+      <div class="home_content">
+        <div class="home_content_inner body1">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div>
+            <h1><label>{{ userName}}</label></h1>
+            <!-- <h1>Travel Explorer</h1> -->
+          </div>
+          
+         
+          <br>
+          <br>
+         
+          <br>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div style="font-size: 30px;" class="find_title text-center">Make Memories Around The World
+                </div>
+                <br><br>
+              </div>
+              <br><br>
+              <div class="find_form_container">
+                <div class="find_item">
+                  <label>Destination:</label>
+                  <input type="text" class="form-control transperant_color" [(ngModel)]="searchDestination"
+                    placeholder="Enter your Destination">
+                  <h5 id="finalError" style="color: red; ">{{finalErr}}</h5>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <!-- <div class="find_item">
+                      <label >Number of Days</label>
+                      <input type="text"  class="form-control transperant_color" [(ngModel)]="days" placeholder="Number of Days" >
+                    </div> -->
+                <!-- <div style="top: -2.5%" class="find_item">
+                      <div style="position:relative;left: -80%">Budget</div>
+                      <input type="text" [(ngModel)]="budget" style="position:relative;left: -80%" class="destination find_input"  placeholder="">
+                    </div>-->
+                &nbsp;&nbsp;&nbsp;
+                <div class="find_item" [(ngModel)]="interest">
+                  <label>Interest</label>
+                  <select name="interest" style="color: white;background-color: transparent;"
+                    class="form-control transperant_color">
+                    <option style="background-color: gray;">Select</option>
+                    <option style="background-color: gray;">Museum</option>
+                    <option style="background-color: gray;">Adventure</option>
+                    <option style="background-color: gray;">Devotional</option>
+                    <option style="background-color: gray;">Scenic</option>
+                    <option style="background-color: gray;">Party</option>
+                  </select>
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <button class="btn find" (click)="getSearchResult()">Find</button>
+
+                <br><br><br>
+                
+
+              </div>
+              <p>Are you making plans for visiting a place? A fun trip with family and friends? Not sure of the places to Visit?
+                  Worried about the budget and the best plan for the trip? Don't worry we are here to help you. Give us the destination that you
+                  want to visit interests we would give you set of best places and give you the directions for each place from your geo location.
+                  expect</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class='listbackground'>
+        <div class="col-lg-14 ">
+          <div class="panel panel-default col-12">
+            <!-- <div class="panel-heading"><b>Where to get</b></div> -->
+            <div class="panel-body">
+
+              <div *ngFor="let index of list" style="background: transparent ;border: transparent;"
+                class="list-group-item ">
+                <div class="pull-left">
+                  <img style="width:150px; height:150px" src={{index.imageurl}}>
+
+                </div>
+
+                <span class="pull-right">
+                  <h4 class="list-group-item-heading" style=" color: white;">{{ index.name }}</h4>
+                  <label style=" color: white;"> {{index.address}} </label>
+                  <a target="_blank"
+                    href="http://maps.google.com/maps?saddr={{index.currentLatitude}},{{index.currentLongitude}}&daddr={{index.location.lat}},{{index.location.lng}}">
+                    <img src="../../assets/google.png" style="width: 30px; height: 30px;">
+                  </a>
+
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>

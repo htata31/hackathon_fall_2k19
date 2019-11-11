@@ -1,0 +1,65 @@
+.parent-container {
+    position: relative;
+    height:100%;
+    width: 100%;
+  }
+  
+  .child-container {
+    color:white;
+    text-align: center;
+    position: center;
+  
+  }
+  .desc {
+    font-family: Georgia;
+    font-size: 17px;
+  }
+
+  .body1{
+    height:40em;background-size:cover; width:100%;
+    /* background-image:url("../../assets/home.jpg"); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat:repeat;
+    /* background-attachment: fixed; */
+}
+
+.listbackground{
+  height:400em;background-size:cover; width:100%;
+  
+  background-image:url("../../assets/newsletter.jpg");
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: White;
+  opacity: 1; /* Firefox */
+}
+.transperant_color{
+  color: whitesmoke;
+  background: transparent;
+}
+
+.find_item{
+  display: inline-block;
+  width: 250px;
+}
+
+.find_form_container{
+  display: inline-block;
+  left: 18%;
+  position: relative;
+}
+
+.find{
+  color: #fe435b;;
+  background-color: dimgray;
+  width: 100px;
+  top: -2.5%;
+  position: relative;
+  }
+
+.resultdata{
+  position: relative;
+  left: 0px;
+  width: 700px;
+  }
